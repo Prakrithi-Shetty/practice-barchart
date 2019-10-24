@@ -18,7 +18,7 @@ class Ref extends React.Component{
    const refValue=this.myRef.current.value;
    this.setState({
        name:refValue,
-
+  
    });
     }
 
@@ -31,7 +31,7 @@ class Ref extends React.Component{
     render(){
         return(
             <div>
-            <div>hi my name is {this.state.name} and my age is {this.state.age}</div>
+           <div><b>hi my name is {this.state.name} and my age is {this.state.age}</b></div>
             <input type ="text" onChange ={ this.newNme} ref={this.myRef}></input >
         
             <img src={this.state.isLightOn ? yellow : lightoff } alt = "wow" onClick={this.print} id="1"/>

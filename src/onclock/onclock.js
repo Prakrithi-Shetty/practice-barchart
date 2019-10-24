@@ -8,7 +8,7 @@ class Onclock extends React.Component{
         const time = today.getHours() + " :"+ today.getMinutes()+ ": "+today.getSeconds();
         this.state={currentdate: time};
         this.change=this.change.bind(this);
-        this.myRef = React.createRef();
+        
 
     }
     change(){
@@ -18,15 +18,11 @@ class Onclock extends React.Component{
           currentdate: time,
         });
       }
-      newName(){
-        console.log(this.myRef.current.value);
-
-      }
-    
+      
     render(){
         return(
             <div className="Clock" onClick={this.change}>
-            Hi {this.props.name} current time is {this.state.currentdate}
+            <b>Hi {this.props.name} current time is {this.state.currentdate}</b>
             
        </div>  );
     }
